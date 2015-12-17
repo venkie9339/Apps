@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android.setVerticalScrollBarEnabled="true"
+
+        android:gravity="center_horizontal"
+        android:padding="10px" >
+
+        <TextView
+            android:id="@+id/intro_label_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15px"
+            android:layout_marginLeft="10px"
+            android:text="SMS Example"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/label_smsinputdest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_label_sms"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:text="Enter destination number:" />
+
+        <EditText
+            android:id="@+id/smsinputdest"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_smsinputdest"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/label_smsinputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsinputdest"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:text="Enter text to send:" />
+
+        <EditText
+            android:id="@+id/smsinputtext"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_smsinputtext"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="10px"
+            android:text="" />
+
+        <Button
+            android:id="@+id/smssend_button"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smsinputtext"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:text="Send SMS" />
+    </RelativeLayout>
+
+</ScrollView>

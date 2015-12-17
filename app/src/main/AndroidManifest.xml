@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rayan.venki.apps" >
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.light"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <service android:name=".BackgroundService" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".GreetUserActivity"
+            android:label="@string/title_activity_greet_user" >
+        </activity>
+        <activity
+            android:name=".AboutAppActivity"
+            android:label="@string/title_activity_about_app" >
+        </activity>
+        <activity
+            android:name=".BuiltInAppActivity"
+            android:label="@string/title_activity_builtin_app" >
+        </activity>
+
+        <receiver android:name=".BootCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".DateChangedReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".InstagramCloneActivity"
+            android:label="@string/title_activity_instagram_clone" >
+        </activity>
+        <activity
+            android:name=".ActivityLifeCycleDemo"
+            android:label="@string/title_activity_life_cycle_demo" >
+        </activity>
+        <activity
+            android:name=".Camera"
+            android:label="@string/title_activity_camera" >
+        </activity>
+        <activity
+            android:name=".Calculator"
+            android:label="@string/title_activity_calculator" >
+        </activity>
+        <activity
+            android:name=".AudioActivity"
+            android:label="@string/title_activity_audio" >
+        </activity>
+        <activity
+            android:name=".ActivityNavigator"
+            android:label="@string/title_activity_activity_navigator" >
+        </activity>
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news" >
+        </activity>
+        <activity
+            android:name=".SharedPreferencesdemo"
+            android:label="@string/title_activity_shared_preferencesdemo" >
+        </activity>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PlayYoutubeVideo"
+            android:label="@string/title_activity_play_youtube_video" >
+        </activity>
+
+        <receiver android:name=".MyBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AlaramActivity"
+            android:label="@string/title_activity_alaram" >
+        </activity>
+        <activity
+            android:name=".MainAppActivity"
+            android:label="@string/title_activity_main_app" >
+        </activity>
+        <activity
+            android:name=".ListViewDemo"
+            android:label="@string/title_activity_list_view_demo" >
+        </activity>
+        <activity
+            android:name=".BuiltinContentDemo"
+            android:label="@string/title_activity_builtin_content_demo" >
+        </activity>
+        <activity
+            android:name=".SensorListDemo"
+            android:label="@string/title_activity_sensor_list_demo" >
+        </activity>
+        <activity
+            android:name=".SensorDemo"
+            android:label="@string/title_activity_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".GravitySensorDemo"
+            android:label="@string/title_activity_gravity_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".ProximitySensorDemo"
+            android:label="@string/title_activity_proximity_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".LightSensorDemo"
+            android:label="@string/title_activity_light_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".CompassSensorDemo"
+            android:label="@string/title_activity_compass_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".AcceloSensorDemo"
+            android:label="@string/title_activity_accelo_sensor_demo" >
+        </activity>
+        <activity
+            android:name=".Shake"
+            android:label="@string/title_activity_shake" >
+        </activity>
+        <activity
+            android:name=".SmsExample"
+            android:label="@string/title_activity_sms_example" >
+        </activity>
+        <activity
+            android:name=".TelephonyExample"
+            android:label="@string/title_activity_telephony_example" >
+        </activity>
+        <activity
+            android:name=".HttpActivity"
+            android:label="@string/title_activity_http" >
+        </activity>
+        <activity
+            android:name=".LocalServiceDemo"
+            android:label="@string/title_activity_local_service_demo" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".DisplayMapActivityDemo"
+            android:label="@string/title_activity_display_map_activity_demo" >
+        </activity>
+
+        <activity
+            android:name=".DatabasesActivity"
+            android:label="Database" >
+        </activity>
+    </application>
+
+</manifest>

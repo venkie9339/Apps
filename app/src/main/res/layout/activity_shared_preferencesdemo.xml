@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/llParent"
+    android:layout_height="match_parent">
+
+    <TextView android:text="What color do you prefer for background ?" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:id="@+id/textView" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:onClick="changeBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="White"
+            android:id="@+id/rbWhite"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:id="@+id/rbGreen"
+            android:onClick="changeBackground"
+            android:layout_centerHorizontal="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:id="@+id/rbBlue"
+            android:onClick="changeBackground"
+            android:layout_centerHorizontal="true" />
+    </RadioGroup>
+
+</LinearLayout>
